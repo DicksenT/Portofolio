@@ -66,3 +66,6 @@ function toggleModal(){
 }
 
 
+function gitHubbroke(){
+    alert('This Github link is broken :(')
+}
