@@ -1,0 +1,49 @@
+{
+  "name": "static-json",
+  "description": "static json",
+  "homepage": "https://github.com/dylan-7/static-json",
+  "version": "0.0.13",
+  "author": "dylan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylan-7/static-json.git"
+  },
+  "main": "dist/index.js",
+  "contributors": [],
+  "keywords": [
+    "static-json"
+  ],
+  "engines": {
+    "node": ">=0.6"
+  },
+  "files": [
+    "dist",
+    "lib",
+    "types"
+  ],
+  "types": "./types/index.d.ts",
+  "devDependencies": {
+    "@types/lodash": "^4.14.120",
+    "lodash": "^4.17.11",
+    "parcel": "^1.11.0",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.2.4"
+  },
+  "scripts": {
+    "prepublish": "yarn run build",
+    "pretest": "yarn run --silent readme && yarn run --silent lint",
+    "test": "yarn run --silent",
+    "tests-only": "node test",
+    "postlint": "",
+    "build": "yarn run clean && tsc --outDir build --declaration --declarationDir types && parcel build build/index.js --no-cache -d dist / ",
+    "clean": "rimraf dist types"
+  },
+  "bugs": {
+    "url": "https://github.com/dylan-7/static-json/issues"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "license": "ISC"
+}
